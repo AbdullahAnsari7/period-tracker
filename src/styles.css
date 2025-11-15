@@ -1,0 +1,51 @@
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.7; }
+  50% { transform: scale(1.15); opacity: 1; }
+}
+.pulsing-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #81C784;
+  animation: pulse 1.2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+.bounce {
+  animation: bounce 0.6s;
+}
+
+@keyframes fadein {
+  from { opacity: 0; transform: scale(0.96); }
+  to { opacity: 1; transform: scale(1); }
+}
+.fade-in {
+  animation: fadein 0.8s;
+}
+
+body, #root, .App {
+  transition: background 0.8s;
+}
+
+input[type="date"], input[type="number"] {
+  padding: 4px;
+  border-radius: 4px;
+  border: 1px solid #888;
+  margin-top: 6px;
+  font-size: 1rem;
+}
+
+button {
+  padding: 6px 14px;
+  border-radius: 5px;
+  border: 1px solid #333;
+  background: #fff;
+  cursor: pointer;
+  margin-top: 8px;
+}
+button:hover {
+  background: #f0f0f0;
+}
